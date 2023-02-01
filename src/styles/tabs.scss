@@ -1,0 +1,24 @@
+.tab-pane {
+  @apply hidden;
+  &.active {
+    @apply block;
+  }
+}
+.nav-item {
+  @apply list-none px-2;
+  a {
+    @apply text-lg text-black font-semibold cursor-pointer opacity-40;
+    &.prev-active{
+        @apply opacity-100;
+    }
+
+    &.active {
+      @apply text-skyBlue opacity-100;
+    }
+  }
+}
+.tabs {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+

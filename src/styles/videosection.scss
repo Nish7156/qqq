@@ -1,0 +1,17 @@
+video::-webkit-media-controls {
+  @apply hidden;
+}
+
+.combined {
+  @apply text-white;
+  text-shadow: 2px 2px 0 rgb(224, 182, 16), -1px -1px 0 rgb(224, 182, 16),
+    1px -1px 0 rgb(224, 182, 16), -1px 1px 0 rgb(224, 182, 16),
+    1px 1px 0 rgb(224, 182, 16);
+}
+
+.masked {
+  @apply block mx-5 h-full max-w-full;
+  mask-image: url("/images/videoFrame.png");
+  mask-repeat: no-repeat, no-repeat;
+  mask-size: 100% 100%, 100% 100%;
+}

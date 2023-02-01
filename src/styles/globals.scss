@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./typography.scss";
+@import "./menu.scss";
+@import "./tabs.scss";
+@import "./videosection.scss";
+
+body {
+  @apply font-display;
+}
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.cls-1,
+.cls-2 {
+  fill: #22b0e6;
+}
+.cls-1,
+.cls-3 {
+  font-family: Helvetica-Bold, Helvetica;
+  font-size: 166px;
+  font-weight: 700;
+}
+.cls-1,
+.cls-3,
+.cls-4 {
+  isolation: isolate;
+}
+.cls-3 {
+  fill: #848484;
+}
+
+.cls-1 {
+  fill: none;
+  stroke: #22b0e6;
+  stroke-width: 3px;
+}

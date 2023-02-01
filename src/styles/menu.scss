@@ -1,0 +1,52 @@
+nav {
+  @apply relative;
+  &::after {
+    content: "";
+    @apply block clear-both;
+  }
+}
+
+aside {
+  @apply absolute w-[100px] h-full bg-white left-[-300px] bottom-0 top-0 box-border pt-12 transition-all	ease-in-out	 duration-500;
+  &.active {
+    @apply left-0;
+  }
+  a {
+    @apply block p-6 border-b-gray;
+  }
+}
+
+.toggle-wrap {
+  @apply p-2 relative cursor-pointer float-left select-none touch-none;
+}
+.toggle-bar,
+.toggle-bar::before,
+.toggle-bar::after,
+.toggle-wrap.active .toggle-bar,
+.toggle-wrap.active .toggle-bar::before,
+.toggle-wrap.active .toggle-bar::after {
+  @apply transition-all	ease-in-out	 duration-200;
+}
+.toggle-bar {
+  @apply border-t-black-100 border-t-4 w-[32px] relative block;
+}
+.toggle-bar::before,
+.toggle-bar::after {
+  content: "";
+  @apply bg-black-100 block h-1 w-[32px] absolute top-[-12px] rotate-0	origin-[13%];
+}
+.toggle-bar::after {
+  @apply top-1;
+}
+.toggle-wrap.active .toggle-bar {
+  @apply border-t-[6px] border-transparent;
+}
+.toggle-wrap.active .toggle-bar::before {
+  @apply rotate-45;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.toggle-wrap.active .toggle-bar::after {
+  @apply -rotate-45;
+}
