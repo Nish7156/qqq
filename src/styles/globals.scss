@@ -5,36 +5,112 @@
 @import "./menu.scss";
 @import "./tabs.scss";
 @import "./videosection.scss";
+@import "./animate.scss";
+@import "./memoir.scss";
+@import "animate.scss";
+@import "./test.scss";
+@import "./svg.scss";
+@import "./select.scss";
+@import "./forum.scss";
+@import "./moveSocial.scss";
+@import "./stickysection.scss";
+@import "./image.scss";
 
 body {
   @apply font-display;
-}
-svg {
-  overflow: hidden;
-  vertical-align: middle;
+  scroll-behavior: smooth;
+
 }
 
-.cls-1,
-.cls-2 {
-  fill: #22b0e6;
+#rebootHolder {
+    opacity: 0;
 }
-.cls-1,
-.cls-3 {
-  font-family: Helvetica-Bold, Helvetica;
-  font-size: 166px;
-  font-weight: 700;
-}
-.cls-1,
-.cls-3,
-.cls-4 {
-  isolation: isolate;
-}
-.cls-3 {
-  fill: #848484;
+#smallCircle {
+    transform: rotate(-220deg);
 }
 
-.cls-1 {
-  fill: none;
-  stroke: #22b0e6;
-  stroke-width: 3px;
+.video-holder:hover .play-btn {
+    opacity: 1;
+}
+.socialHolder {
+  bottom: 60px;
+  right: 60px;
+  opacity: 0;
+
+}
+
+.video-holder {
+  opacity: 0;
+  transition: all 1s;
+}
+
+  
+.atHeader {
+  right: 250px;
+  top:-50px;
+  opacity: 0;
+  -webkit-animation: socialAnimation 2s linear forwards;
+}
+
+@keyframes socialAnimation {
+  0% {
+    opacity: 0;
+    top: -50px;
+  }
+  25% {
+    opacity: 0;
+    top: -50px;
+  }
+  50% {
+    opacity: 0.5;
+    top: -25px;
+  }
+  100% {
+    opacity: 1;
+    top: 50px
+  }
+}
+
+  
+
+
+.sec3persions1 {
+  animation: stroke_fill 3s linear forwards;
+  stroke-dasharray: 324.774;
+  stroke-dashoffset: 324.774;
+  
+}
+.sleepPersion {
+  animation: stroke_fill 3s linear forwards;
+  stroke-dasharray: 324.774;
+  stroke-dashoffset: 324.774;
+  
+}
+@keyframes stroke_fill {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: white;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #22b0e6;
+    stroke-dashoffset: 0;
+  }
+}
+
+.container{
+  @apply px-10;
+}
+
+.line{
+  @apply bg-gray-200 h-px w-full;
+}
+
+
+
+.arrow-bottom:after {
+  content: " ";
+  @apply absolute  h-2 w-2 bg-primary -rotate-45 transform origin-top-left -bottom-2 ;
 }

@@ -1,5 +1,5 @@
 nav {
-  @apply relative;
+  @apply relative ;
   &::after {
     content: "";
     @apply block clear-both;
@@ -7,12 +7,12 @@ nav {
 }
 
 aside {
-  @apply absolute w-[100px] h-full bg-white left-[-300px] bottom-0 top-0 box-border pt-12 transition-all	ease-in-out	 duration-500;
+  @apply fixed w-[300px] bottom-0 h-full bg-white left-[-300px] bottom-0 top-0 box-border pt-12 transition-all	ease-in-out	 duration-500 shadow-md	flex items-center flex-col;
   &.active {
     @apply left-0;
   }
   a {
-    @apply block p-6 border-b-gray;
+    @apply block p-6 border-b-gray text-md;
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
-function Menu() {
+function Menu({menus}:any) {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
@@ -17,9 +18,16 @@ function Menu() {
         </div>
       </nav>
       <aside className={isActive ? "active" : ""}>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">About</a>
+      {menus.map((data: any, index: number) => (
+      
+      <Link href={data.attributes.slug} key={index}>
+      {data.attributes.title}
+    </Link>
+        
+    ))
+}
+        
+     
       </aside>
     </div>
   );

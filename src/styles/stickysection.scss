@@ -1,0 +1,16 @@
+.stickySection {
+    position: sticky;
+    top:20%;
+    left: 0;
+    width: 100vw;
+    right: 0;
+  //   will-change: transform;
+  
+    .stickyGhost {
+      width: 100vw;
+    }
+  }
+  
+  .stickyViewPort {
+    height: 100vh;
+  }

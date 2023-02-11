@@ -47,7 +47,7 @@
         </g>
       </g>
     </g>
-    <text id="Kofuku" transform="translate(944.367 598.712) rotate(-11)" fill="#848484" font-size="14" font-family="Helvetica"><tspan x="-21.793" y="0">Kofuku</tspan></text>
-    <text id="Social" transform="translate(1005.372 605.001) rotate(-8)" fill="#00c5f2" font-size="11" font-family="Helvetica"><tspan x="-14.98" y="0">Social</tspan></text>
+    <text id="Kofuku" transform="translate(944.367 598.712) rotate(-11)" fill="#848484" fontSize="14" font-family="Helvetica"><tspan x="-21.793" y="0">Kofuku</tspan></text>
+    <text id="Social" transform="translate(1005.372 605.001) rotate(-8)" fill="#00c5f2" fontSize="11" font-family="Helvetica"><tspan x="-14.98" y="0">Social</tspan></text>
   </g>
 </svg>

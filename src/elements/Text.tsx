@@ -1,10 +1,10 @@
 import React from "react";
 
-function Text({  size,children }: any) {
+function Text({ size, children, color }: any) {
   return (
     <>
       <div
-        className={`font-regular leading-loose		${
+        className={`font-regular 		${
           size == "xxl"
             ? `text-xxl`
             : size == "md"
@@ -21,6 +21,8 @@ function Text({  size,children }: any) {
             ? "text-lg"
             : "text-base "
         }
+         ${color}
+
        `}
       >
         {children}
@@ -30,4 +32,3 @@ function Text({  size,children }: any) {
 }
 
 export default Text;
-

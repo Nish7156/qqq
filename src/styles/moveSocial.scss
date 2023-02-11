@@ -1,0 +1,16 @@
+.moveBottom {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  -webkit-animation: moveSocialBottom 2s linear forwards;
+}
+@keyframes moveSocialBottom {
+  from {
+    opacity: 1;
+    bottom: 60px;
+  }
+  to {
+    opacity: 0;
+    bottom: -50px;
+  }
+}

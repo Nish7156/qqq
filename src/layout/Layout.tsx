@@ -1,10 +1,9 @@
-import React, { Children } from "react";
+import React, {Children } from "react";
 import Header from "@/components/Header";
-
-function Layout({ children }: any) {
+function Layout({ children, menus }: any) {
   return (
     <div>
-      <Header />
+      <Header menus={menus} />
       {children}
     </div>
   );

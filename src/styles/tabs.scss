@@ -1,12 +1,23 @@
 .tab-pane {
   @apply hidden;
+
+
   &.active {
+    transition: all 1s;
+
     @apply block;
   }
+}
+.tab-content {
+  transition: all 1s;
+  width: 290px;
+  height: 290px;
 }
 .nav-item {
   @apply list-none px-2;
   a {
+    transition: all 1s;
+    cursor: default;
     @apply text-lg text-black font-semibold cursor-pointer opacity-40;
     &.prev-active{
         @apply opacity-100;
@@ -14,6 +25,8 @@
 
     &.active {
       @apply text-skyBlue opacity-100;
+      text-shadow: 1px 1px yellow;
+
     }
   }
 }
@@ -21,4 +34,25 @@
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
 }
+// .doubleImage {
+//   .image-container {
+//     opacity: 0;
+//   }
+//   .image-container:first-child {
+//     -webkit-animation: load 1s forwards;
+//     animation: load 1s forwards;
+//   }
+//   .image-container:nth-child(2) {
+//     -webkit-animation: load 1s forwards 1s;
+//     animation: load 1s forwards 1s;
+//   }
+// }
 
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

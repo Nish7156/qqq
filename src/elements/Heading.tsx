@@ -1,24 +1,25 @@
 import React from "react";
 
-const Heading = ({ priority, children }: any) => {
+const Heading = ({ priority, children, color,font }: any) => {
   const DynamicTag: any = `h${priority}`;
   return (
     <DynamicTag
-      className={` font-black ${
+      className={`${font ? `${font}` : 'font-black'} ${
         priority == 1
-          ? "text-xxl"
+          ? "text-4xl"
           : priority == 2
-          ? "text-xxl "
+          ? "text-4xl "
           : priority == 3
-          ? "lg:xl "
+          ? "text-3xl "
           : priority == 4
-          ? "lg:text-xxl text-xl "
+          ? "text-xl "
           : priority == 5
-          ? "lg:text-xl text-lg "
-          : priority == 6
-          ? "text-sm"
-          : "text-lg  "
-      }
+          ? "text-lg"
+          : priority == 6 &&
+           "text-base"
+      } 
+      ${color ? `${color}` : `text-black`}
+
        
        `}
     >
