@@ -16,7 +16,7 @@ function Who({ title, description }: any) {
   let groupPeoples = false;
   let sleepPersion = false;
 
-  console.log(scrollPosition, "scrollPosition");
+  // console.log(scrollPosition, "scrollPosition");
 
   if (scrollPosition > 1500) {
     groupPeoples = true;

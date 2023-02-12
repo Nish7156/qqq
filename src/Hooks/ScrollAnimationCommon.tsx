@@ -61,10 +61,14 @@ export function ScrollAnimationCommon(
       const top = boundaries.top;
       const height = boundaries.height;
       const percentage = (center - top) / height;
+      console.log(percentage,"percentage");
+      
       const drawLength = percentage > 0 ? totalLength * percentage * speed : 0;
+      console.log(drawLength,"drawLength");
+      
       path.style.strokeDashoffset =
         drawLength < totalLength ? totalLength - drawLength : 0;
-      path.style.transition = "stroke-dashoffset 0.1s ease";
+      path.style.transition = "stroke-dashoffset 0.2s ease";
       // console.log(drawLength,"drawLength",path);
       
     });
@@ -72,6 +76,8 @@ export function ScrollAnimationCommon(
 
   window.addEventListener("scroll", function (e) {
     last_known_scroll_position = window.scrollY;
+    console.log(last_known_scroll_position,"Scroll");
+    
     if (!ticking) {
       window.requestAnimationFrame(function () {
         doSomething(last_known_scroll_position);
