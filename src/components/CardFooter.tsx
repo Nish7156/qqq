@@ -4,7 +4,7 @@ import Down from "/public/images/down.svg";
 import CustomImage from "./CustomImage";
 import Text from "@/elements/Text";
 import Tag from "/public/images/tag.svg";
-import Share1 from "/public/images/Share.svg";
+// import Share1 from "/public/images/Share.svg";
 
 
 function CardFooter({ footer, value, unvalue, comment, participants,share }: any) {
@@ -50,7 +50,7 @@ function CardFooter({ footer, value, unvalue, comment, participants,share }: any
           </div>
           {share && (
             <div className="w-5 h-5 ">
-            <CustomImage src={Share1} />
+            <CustomImage src={''} />
           </div>
 
           )}
